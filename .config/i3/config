@@ -216,6 +216,7 @@ bindsym $mod+shift+t exec telegram-desktop
 bindsym $mod+e exec thunar
 bindsym $mod+m exec spotify-launcher
 bindsym $mod+l exec deluge
+bindsym $mod+c exec code
 
 #===================================================================================================================
 
