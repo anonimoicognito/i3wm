@@ -113,7 +113,7 @@ set $ws10 "10"
 # Assign Programs to Worksapce
 for_window [class="Terminator"] move to workspace $ws1
 for_window [class="Brave-browser"] move to workspace $ws2
-for_window [class="spotify-launcher"] move to workspace $ws3
+for_window [class="Spotify"] move to workspace $ws4
 #for_window [class="Deluge"] move to workspace $ws4
 
 
@@ -209,7 +209,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 #===================================================================================================================
 
 # Personal Programs
-bindsym $mod+i exec brave
+bindsym $mod+i exec brave -incognito
 bindsym $mod+k exec chromium
 bindsym $mod+t exec kotatogram-desktop
 bindsym $mod+shift+t exec telegram-desktop
@@ -236,8 +236,11 @@ exec --no-startup-id unclutter -idle 3
 # logout script
 bindsym $Mod+x exec --no-startup-id rofi_run -l
 
+# Monitor Selection
+# bindsym $Mod+x exec --no-startup-id rofi_run -p
+
 # Screenshot
-bindsym Print exec --no-startup-id "scrot '%S.png' -e 'mv $f $$(xdg-user-dir PICTURES)/ArchLabs-%S-$wx$h.png ; feh $$(xdg-user-dir PICTURES)/ArchLabs-%S-$wx$h.png'"
+bindsym Print exec --no-startup-id "scrot '%S.png' -e 'mv $f $$(xdg-user-dir PICTURES)/screenshot-%S-$wx$h.png ; feh $$(xdg-user-dir PICTURES)/screenshot-%S-$wx$h.png'"
 
 # border & title
 # for_window [class="^.*"] border pixel 1, title_format "<b> %class >> %title </b>"
